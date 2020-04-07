@@ -21,23 +21,22 @@ export class UserPersonalDetailsForm extends Component {
         const { values } = this.props
 
         return (
-            <React.Fragment>
-                <label>
+            <div className="wrapper">
+                <label className="label--form">
                     Age:
-                <input type="text" placeholder="Age" onChange={this.props.handleChange("age")} value={values.age} />
+                <input type="text" placeholder="Age" onChange={this.props.handleChange("age")} value={values.age} className="input--form" />
                 </label>
-                <label>
+                <label className="label--form">
                     Occupation:
-                <input type="text" placeholder="Occupation" onChange={this.props.handleChange("occupation")} value={values.occupation} />
+                <input type="text" placeholder="Occupation" onChange={this.props.handleChange("occupation")} value={values.occupation} className="input--form" />
                 </label>
-                <label>
+                <label className="label--form">
                     Bio:
-                <input type="text" placeholder="Bio" onChange={this.props.handleChange("bio")} value={values.bio} />
+                <input type="text" placeholder="Bio" onChange={this.props.handleChange("bio")} value={values.bio} className="input--form" />
                 </label>
-                <button onClick={this.continue}>Continue</button>
-                <button onClick={this.back}>Back</button>
-
-            </React.Fragment>
+                <button onClick={this.continue} className="button--form">Continue</button>
+                <button onClick={this.back} className="button--form">Back</button>
+            </div>
         )
     }
 }

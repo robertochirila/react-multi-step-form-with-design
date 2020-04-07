@@ -17,21 +17,21 @@ export class UserCredentialsForm extends Component {
     render() {
         const { values } = this.props
         return (
-            <React.Fragment>
-                <label>
+            <div className="wrapper">
+                <label className="label--form">
                     First Name:
-                <input type="text" placeholder="First Name" onChange={this.props.handleChange("firstName")} value={values.firstName} />
+                <input type="text" placeholder="First Name" onChange={this.props.handleChange("firstName")} value={values.firstName} className="input--form" />
                 </label>
-                <label>
+                <label className="label--form">
                     Last Name:
-                <input type="text" placeholder="Last Name" onChange={this.props.handleChange("lastName")} value={values.lastName} />
+                <input type="text" placeholder="Last Name" onChange={this.props.handleChange("lastName")} value={values.lastName} className="input--form" />
                 </label>
-                <label>
+                <label className="label--form">
                     Email:
-                <input type="email" placeholder="email" onChange={this.props.handleChange("email")} value={values.email} />
+                <input type="email" placeholder="Email" onChange={this.props.handleChange("email")} value={values.email} className="input--form" />
                 </label>
-                <button onClick={this.continue}>Continue</button>
-            </React.Fragment>
+                <button onClick={this.continue} className="button--form">Continue</button>
+            </div>
         )
     }
 }

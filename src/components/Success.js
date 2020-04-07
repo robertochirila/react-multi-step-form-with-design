@@ -4,7 +4,7 @@ export class Success extends Component {
     render() {
         return (
             <React.Fragment>
-                <p>Success</p>
+                <h1>Data sent successfully !</h1>
             </React.Fragment>
         )
     }
